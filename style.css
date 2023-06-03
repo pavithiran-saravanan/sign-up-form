@@ -7,6 +7,10 @@ a{
     text-decoration: none;
 }
 
+input {
+    all: unset;
+}
+
 @font-face {
     font-family: 'norsebold';
     src: url('/fonts/norse-bold-webfont.woff2') format('woff2'),
@@ -105,12 +109,28 @@ body{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 20%);
 }
 
+.form-input input:invalid{
+    border-color: rgb(184, 43, 43);
+}
+
+.form-input input:invalid~.requiredLabel::before{
+    content: 'Required';
+    font-size: .9rem;
+    color: rgb(184, 43, 43);
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -1rem;
+}
+
 input[type = "password"][isValid = "invalid"]{
     border-color: rgb(188, 46, 46);
 }
 
-input[type = "password"][isValid = "invalid"]+.match-pass::after{
+input[type = "password"][isValid = "invalid"]~.match-pass::after{
     content: 'Passwords do not match';
+    font-size: .9rem;
     color: rgb(184, 43, 43);
     padding: 5px 20px;
     border-radius: 5px;
