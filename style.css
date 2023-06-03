@@ -3,23 +3,27 @@
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'norsebold';
     src: url('/fonts/norse-bold-webfont.woff2') format('woff2'),
          url('/fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body{
     height: 100vh;
     display: flex;
+    flex-flow: row wrap;
 }
 
 .image-sidebar{
     flex: 2;
-    background-color: rgb(49, 80, 49);
+    background-color: #596D48;
     background: url(/images/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
     background-position: center;
@@ -27,6 +31,7 @@ body{
 
 .form-main{
     flex: 4;
+    font-family: Helvetica, sans-serif;
 }
 
 .logo-container{
@@ -36,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 180px;
+    top: 20%;
 }
 
 .logo-text{
@@ -44,4 +49,112 @@ body{
     font-family: 'NorseBold';
     font-size: 80px;
 }
+
+.form-main{
+    width: 100%;
+    margin: auto;
+}
+
+.section{
+    width: 90%;
+    margin: auto;
+}
+
+.details-section{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.short-text{
+    margin-top: 1rem;
+}
+
+.form-card{
+    box-shadow: 0px 2px 15px rgb(0, 0, 0, 10%);
+    padding: 1.5rem 0 2.5rem 0;
+    margin-top: 3rem;
+}
+
+.legend{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.form-input label{
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1.5px;
+}
+
+.form-input input{
+    width: 100%;
+    height: 2.5rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 5px;
+    padding-left: .8rem;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.form-input input:focus{
+    border-color: rgb(79, 79, 188);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 20%);
+}
+
+input[type = "password"][isValid = "invalid"]{
+    border-color: rgb(188, 46, 46);
+}
+
+input[type = "password"][isValid = "invalid"]+.match-pass::after{
+    content: 'Passwords do not match';
+    color: rgb(184, 43, 43);
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -1rem;
+}
+
+.form-fields{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 2rem;
+    column-gap: 4rem;
+}
+
+.form-input{
+    width: 40%;
+}
+
+.button-section{
+    margin-top: 3rem;
+}
+
+.login-text{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.login{
+    color: #596D48;
+    font-weight: 600;
+}
+
+.submit{
+    background-color: #596D48;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+
 
